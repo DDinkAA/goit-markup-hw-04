@@ -236,7 +236,7 @@ h1 {
 
 /* Our qualities */
 
-.qualities {
+.qualities.section {
   width: 1600px;
   margin-left: auto;
   margin-right: auto;
