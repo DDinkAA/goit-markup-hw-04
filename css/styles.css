@@ -271,12 +271,6 @@ h1 {
   margin-bottom: 10px;
 }
 
-.qualities {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .qualities-pict {
   height: 120px;
   margin-bottom: 30px;
@@ -325,10 +319,6 @@ h1 {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* .team-card:not(:last-child) {
-  margin-right: 30px;
-} */
-
 .team-title {
   font-size: 16px;
   font-weight: 500;
@@ -356,33 +346,49 @@ h1 {
   margin-bottom: 16px;
 }
 
+/* social icons */
+
 .team-icons {
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.team-icon:not(:last-child) {
-  margin-right: 10px;
+.team-icon {
+  display: flex;
+  width: calc((100% - 30px) / 4);
+  border-radius: 50%;
 }
 
-.team-link {
+.social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  border-radius: 50%;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
-.team-icon .team-link:hover,
-.team-icon .team-link:focus {
+.social-link .icon-normal {
+  display: block;
+  fill: var(--icons-color);
+}
+
+.social-link .icon-hover {
+  display: none;
+  fill: var(--primary-white-color);
+}
+
+.team-icon .social-link:hover {
   background-color: var(--accent-color);
 }
 
-.team-link .icon:hover,
-.team-link .icon:focus {
-  fill: var(--primary-white-color);
+.social-link:hover .icon-normal {
+  display: none;
+}
+
+.social-link:hover .icon-hover {
+  display: flex;
 }
 
 /* Clients */
