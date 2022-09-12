@@ -159,18 +159,33 @@ h1 {
   letter-spacing: 0.02em;
 }
 
-.contacts-header .icon {
-  margin-right: 10px;
-  fill: var(--primary-text-color);
-}
-
 .contacts-header .item:not(:last-child) {
   margin-right: 50px;
 }
 
-.contacts-header .link:hover,
-.contacts-header .link:focus {
+.contact-link .icon-normal {
+  margin-right: 10px;
+  display: block;
+  fill: var(--primary-text-color);
+}
+
+.contact-link .icon-hover {
+  margin-right: 10px;
+  display: none;
+  fill: var(--accent-color);
+}
+
+.contact-link:hover,
+.contact-link:focus {
   color: var(--accent-color);
+}
+
+.contact-link:hover .icon-normal {
+  display: none;
+}
+
+.contact-link:hover .icon-hover {
+  display: block;
 }
 
 /* Hero */
