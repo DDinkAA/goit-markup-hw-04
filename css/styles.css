@@ -56,8 +56,6 @@ body {
 }
 
 .section {
-  width: 1600px;
-
   margin-left: auto;
   margin-right: auto;
 }
@@ -169,7 +167,8 @@ h1 {
   fill: var(--primary-text-color);
 }
 
-.contact-link .icon-hover {
+.contact-link .icon-hover,
+.contact-link .icon-focus {
   margin-right: 10px;
   display: none;
   fill: var(--accent-color);
@@ -188,6 +187,14 @@ h1 {
   display: block;
 }
 
+.contact-link:focus .icon-normal {
+  display: none;
+}
+
+.contact-link:focus .icon-hover {
+  display: block;
+}
+
 /* Hero */
 
 .page-hero {
@@ -195,9 +202,8 @@ h1 {
   max-width: 1600px;
   height: 600px;
 
-  padding: 200px 452px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 200px 0;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -208,7 +214,8 @@ h1 {
 }
 
 .hero-title {
-  margin: 0px 0px 30px;
+  max-width: 696px;
+  margin: 0px auto 30px;
 
   color: var(--primary-white-color);
   font-size: 44px;
@@ -217,6 +224,7 @@ h1 {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
+  align-items: center;
 }
 
 .hero-button {
@@ -396,7 +404,8 @@ h1 {
   fill: var(--primary-white-color);
 }
 
-.team-icon .social-link:hover {
+.team-icon .social-link:hover,
+.team-icon .social-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -405,6 +414,14 @@ h1 {
 }
 
 .social-link:hover .icon-hover {
+  display: block;
+}
+
+.social-link:focus .icon-normal {
+  display: none;
+}
+
+.social-link:focus .icon-hover {
   display: block;
 }
 
@@ -424,27 +441,34 @@ h1 {
 }
 
 .client-logo {
+  flex-basis: calc((100% - 150px) / 6);
+  height: 92px;
+}
+
+.client-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: calc((100% - 150px) / 6);
-  height: 92px;
+
+  width: 100%;
+  height: 100%;
   border: 1px solid var(--icons-color);
+  fill: var(--icons-color);
   border-radius: 4px;
   cursor: pointer;
 }
 
-.client-logo:hover,
-.client-logo:focus {
+.client-link:hover,
+.client-link:focus {
+  fill: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
+
 /* Footer */
 
 .page-footer {
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 60px;
+  margin: 0 auto;
+  padding: 60px 0;
 
   background-color: var(--hero-background-color);
 }
@@ -463,7 +487,7 @@ h1 {
 
 .page-footer .logo {
   display: inline-block;
-  margin: 60px 0 30px;
+  margin: 0 0 30px;
 }
 
 .contacts .link:hover,
@@ -495,7 +519,7 @@ h1 {
 }
 
 .footer-text {
-  margin: 72px 0 20px;
+  margin: 0 0 20px;
   font-size: 14px;
   font-weight: 700;
   color: var(--primary-white-color);
@@ -637,7 +661,7 @@ h1 {
   fill: var(--icons-color);
 }
 
-.icon:hover,
+/* .icon:hover,
 .icon:focus {
   fill: var(--accent-color);
-}
+} */
