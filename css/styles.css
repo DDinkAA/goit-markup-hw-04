@@ -390,7 +390,7 @@ h1 {
 }
 
 .social-link:hover .icon-hover {
-  display: flex;
+  display: block;
 }
 
 /* Clients */
