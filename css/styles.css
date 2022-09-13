@@ -72,9 +72,6 @@ h1 {
 /* Header */
 
 .page-header {
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   border-bottom: 1px solid #ececec;
 }
 
